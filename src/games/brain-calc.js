@@ -7,16 +7,21 @@ const description = 'What is the result of the expression?';
 
 const getRandomNumber = () => Math.floor(Math.random() * (maxNumber - minNumber) + minNumber);
 const getCorrectAnswer = (firstOperand, secondOperand, operation) => {
+  let result = 0;
   switch (operation) {
     case '+':
-      return firstOperand + secondOperand;
+      result = firstOperand + secondOperand;
+      break;
     case '-':
-      return firstOperand - secondOperand;
+      result = firstOperand - secondOperand;
+      break;
     case '*':
-      return firstOperand * secondOperand;
+      result = firstOperand * secondOperand;
+      break;
     default:
       break;
   }
+  return result;
 };
 
 const beginRound = () => {
